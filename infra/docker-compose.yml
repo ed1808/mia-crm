@@ -1,0 +1,69 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg18
+    container_name: mia_crm_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: mia_admin
+      POSTGRES_PASSWORD: mia_admin_password
+      POSTGRES_DB: mia_crm_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mia_admin -d mia_crm_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  rabbitmq:
+    image: rabbitmq:4-management
+    container_name: mia_crm_rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: mia_rabbit
+      RABBITMQ_DEFAULT_PASS: mia_rabbit_password
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+
+  redis:
+    image: redis:7-alpine
+    container_name: mia_crm_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  mssql_erp:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mia_crm_erp_sim
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Mond4ERP_Password!2026"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: mia_crm_mailpit
+    restart: unless-stopped
+    ports:
+      - "1025:1025" # SMTP
+      - "8025:8025" # UI
+    volumes:
+      - mailpit_data:/data
+
+volumes:
+  postgres_data:
+  rabbitmq_data:
+  redis_data:
+  mssql_data:
+  mailpit_data:

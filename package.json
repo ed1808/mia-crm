@@ -1,0 +1,20 @@
+{
+  "name": "mia-crm",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*", "packages/modules/*"],
+  "scripts": {
+    "dev:api": "bun --hot run apps/api/src/index.ts",
+    "dev:web": "bun --hot run apps/web/src/server.ts",
+    "build:web": "bun build apps/web/src/index.html --outdir apps/web/dist",
+    "test": "bun test",
+    "lint": "bunx @biomejs/biome check .",
+    "lint:fix": "bunx @biomejs/biome check --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/bun": "latest"
+  },
+  "dependencies": {
+    "redis": "^6.3.0"
+  }
+}

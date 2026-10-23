@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["bun-types"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@mia-crm/kernel": ["packages/kernel/src/index.ts"],
+      "@mia-crm/db": ["packages/db/src/index.ts"],
+      "@mia-crm/erp-acl": ["packages/erp-acl/src/index.ts"],
+      "@mia-crm/module-identity": ["packages/modules/identity/src/index.ts"],
+      "@mia-crm/module-party": ["packages/modules/party/src/index.ts"],
+      "@mia-crm/module-vehicle": ["packages/modules/vehicle/src/index.ts"],
+      "@mia-crm/module-aftersales": ["packages/modules/aftersales/src/index.ts"],
+      "@mia-crm/module-maintenance": ["packages/modules/maintenance/src/index.ts"],
+      "@mia-crm/module-opportunity": ["packages/modules/opportunity/src/index.ts"],
+      "@mia-crm/module-commercial": ["packages/modules/commercial/src/index.ts"],
+      "@mia-crm/module-metrics": ["packages/modules/metrics/src/index.ts"]
+    }
+  }
+}

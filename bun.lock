@@ -1,0 +1,243 @@
+{
+  "lockfileVersion": 2,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "mia-crm",
+      "dependencies": {
+        "redis": "^6.3.0",
+      },
+      "devDependencies": {
+        "@biomejs/biome": "1.9.4",
+        "@types/bun": "latest",
+      },
+    },
+    "apps/api": {
+      "name": "@mia-crm/api",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+        "@mia-crm/module-aftersales": "workspace:*",
+        "@mia-crm/module-ai": "workspace:*",
+        "@mia-crm/module-commercial": "workspace:*",
+        "@mia-crm/module-identity": "workspace:*",
+        "@mia-crm/module-maintenance": "workspace:*",
+        "@mia-crm/module-metrics": "workspace:*",
+        "@mia-crm/module-opportunity": "workspace:*",
+        "@mia-crm/module-party": "workspace:*",
+        "@mia-crm/module-vehicle": "workspace:*",
+        "hono": "^4.7.0",
+      },
+    },
+    "apps/web": {
+      "name": "@mia-crm/web",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/api": "workspace:*",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+      },
+      "devDependencies": {
+        "@types/react": "^19.0.0",
+        "@types/react-dom": "^19.0.0",
+      },
+    },
+    "apps/workers": {
+      "name": "@mia-crm/workers",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/erp-acl": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+        "@mia-crm/module-aftersales": "workspace:*",
+        "@mia-crm/module-maintenance": "workspace:*",
+        "@mia-crm/module-opportunity": "workspace:*",
+        "@mia-crm/module-party": "workspace:*",
+        "@mia-crm/module-vehicle": "workspace:*",
+      },
+    },
+    "packages/db": {
+      "name": "@mia-crm/db",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/kernel": "workspace:*",
+      },
+    },
+    "packages/erp-acl": {
+      "name": "@mia-crm/erp-acl",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+      },
+    },
+    "packages/kernel": {
+      "name": "@mia-crm/kernel",
+      "version": "0.1.0",
+    },
+    "packages/modules/aftersales": {
+      "name": "@mia-crm/module-aftersales",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+      },
+    },
+    "packages/modules/ai": {
+      "name": "@mia-crm/module-ai",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+        "@mia-crm/module-aftersales": "workspace:*",
+        "@mia-crm/module-commercial": "workspace:*",
+        "@mia-crm/module-metrics": "workspace:*",
+        "@mia-crm/module-opportunity": "workspace:*",
+        "@mia-crm/module-party": "workspace:*",
+        "@mia-crm/module-vehicle": "workspace:*",
+      },
+    },
+    "packages/modules/commercial": {
+      "name": "@mia-crm/module-commercial",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+      },
+    },
+    "packages/modules/identity": {
+      "name": "@mia-crm/module-identity",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+      },
+    },
+    "packages/modules/maintenance": {
+      "name": "@mia-crm/module-maintenance",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+      },
+    },
+    "packages/modules/metrics": {
+      "name": "@mia-crm/module-metrics",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+      },
+    },
+    "packages/modules/opportunity": {
+      "name": "@mia-crm/module-opportunity",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+      },
+    },
+    "packages/modules/party": {
+      "name": "@mia-crm/module-party",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+      },
+    },
+    "packages/modules/vehicle": {
+      "name": "@mia-crm/module-vehicle",
+      "version": "0.1.0",
+      "dependencies": {
+        "@mia-crm/db": "workspace:*",
+        "@mia-crm/kernel": "workspace:*",
+      },
+    },
+  },
+  "packages": {
+    "@biomejs/biome": ["@biomejs/biome@1.9.4", "", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "1.9.4", "@biomejs/cli-darwin-x64": "1.9.4", "@biomejs/cli-linux-arm64": "1.9.4", "@biomejs/cli-linux-arm64-musl": "1.9.4", "@biomejs/cli-linux-x64": "1.9.4", "@biomejs/cli-linux-x64-musl": "1.9.4", "@biomejs/cli-win32-arm64": "1.9.4", "@biomejs/cli-win32-x64": "1.9.4" }, "bin": { "biome": "bin/biome" } }, "sha512-1rkd7G70+o9KkTn5KLmDYXihGoTaIGO9PIIN2ZB7UJxFrWw04CZHPYiMRjYsaDvVV7hP1dYNRLxSANLaBFGpog=="],
+
+    "@biomejs/cli-darwin-arm64": ["@biomejs/cli-darwin-arm64@1.9.4", "", { "os": "darwin", "cpu": "arm64" }, "sha512-bFBsPWrNvkdKrNCYeAp+xo2HecOGPAy9WyNyB/jKnnedgzl4W4Hb9ZMzYNbf8dMCGmUdSavlYHiR01QaYR58cw=="],
+
+    "@biomejs/cli-darwin-x64": ["@biomejs/cli-darwin-x64@1.9.4", "", { "os": "darwin", "cpu": "x64" }, "sha512-ngYBh/+bEedqkSevPVhLP4QfVPCpb+4BBe2p7Xs32dBgs7rh9nY2AIYUL6BgLw1JVXV8GlpKmb/hNiuIxfPfZg=="],
+
+    "@biomejs/cli-linux-arm64": ["@biomejs/cli-linux-arm64@1.9.4", "", { "os": "linux", "cpu": "arm64" }, "sha512-fJIW0+LYujdjUgJJuwesP4EjIBl/N/TcOX3IvIHJQNsAqvV2CHIogsmA94BPG6jZATS4Hi+xv4SkBBQSt1N4/g=="],
+
+    "@biomejs/cli-linux-arm64-musl": ["@biomejs/cli-linux-arm64-musl@1.9.4", "", { "os": "linux", "cpu": "arm64" }, "sha512-v665Ct9WCRjGa8+kTr0CzApU0+XXtRgwmzIf1SeKSGAv+2scAlW6JR5PMFo6FzqqZ64Po79cKODKf3/AAmECqA=="],
+
+    "@biomejs/cli-linux-x64": ["@biomejs/cli-linux-x64@1.9.4", "", { "os": "linux", "cpu": "x64" }, "sha512-lRCJv/Vi3Vlwmbd6K+oQ0KhLHMAysN8lXoCI7XeHlxaajk06u7G+UsFSO01NAs5iYuWKmVZjmiOzJ0OJmGsMwg=="],
+
+    "@biomejs/cli-linux-x64-musl": ["@biomejs/cli-linux-x64-musl@1.9.4", "", { "os": "linux", "cpu": "x64" }, "sha512-gEhi/jSBhZ2m6wjV530Yy8+fNqG8PAinM3oV7CyO+6c3CEh16Eizm21uHVsyVBEB6RIM8JHIl6AGYCv6Q6Q9Tg=="],
+
+    "@biomejs/cli-win32-arm64": ["@biomejs/cli-win32-arm64@1.9.4", "", { "os": "win32", "cpu": "arm64" }, "sha512-tlbhLk+WXZmgwoIKwHIHEBZUwxml7bRJgk0X2sPyNR3S93cdRq6XulAZRQJ17FYGGzWne0fgrXBKpl7l4M87Hg=="],
+
+    "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@1.9.4", "", { "os": "win32", "cpu": "x64" }, "sha512-8Y5wMhVIPaWe6jw2H+KlEm4wP/f7EW3810ZLmDlrEEy5KvBsb9ECEfu/kMWD484ijfQ8+nIi0giMgu9g1UAuuA=="],
+
+    "@mia-crm/api": ["@mia-crm/api@workspace:apps/api"],
+
+    "@mia-crm/db": ["@mia-crm/db@workspace:packages/db"],
+
+    "@mia-crm/erp-acl": ["@mia-crm/erp-acl@workspace:packages/erp-acl"],
+
+    "@mia-crm/kernel": ["@mia-crm/kernel@workspace:packages/kernel"],
+
+    "@mia-crm/module-aftersales": ["@mia-crm/module-aftersales@workspace:packages/modules/aftersales"],
+
+    "@mia-crm/module-ai": ["@mia-crm/module-ai@workspace:packages/modules/ai"],
+
+    "@mia-crm/module-commercial": ["@mia-crm/module-commercial@workspace:packages/modules/commercial"],
+
+    "@mia-crm/module-identity": ["@mia-crm/module-identity@workspace:packages/modules/identity"],
+
+    "@mia-crm/module-maintenance": ["@mia-crm/module-maintenance@workspace:packages/modules/maintenance"],
+
+    "@mia-crm/module-metrics": ["@mia-crm/module-metrics@workspace:packages/modules/metrics"],
+
+    "@mia-crm/module-opportunity": ["@mia-crm/module-opportunity@workspace:packages/modules/opportunity"],
+
+    "@mia-crm/module-party": ["@mia-crm/module-party@workspace:packages/modules/party"],
+
+    "@mia-crm/module-vehicle": ["@mia-crm/module-vehicle@workspace:packages/modules/vehicle"],
+
+    "@mia-crm/web": ["@mia-crm/web@workspace:apps/web"],
+
+    "@mia-crm/workers": ["@mia-crm/workers@workspace:apps/workers"],
+
+    "@redis/bloom": ["@redis/bloom@6.3.0", "", { "peerDependencies": { "@redis/client": "^6.3.0" } }, "sha512-NQ5poYpZr0jv6zazN1cy6JY5kIipKFZ3R9GTL4kOUTX3a9YAfY29U8bsE4lWhVQEM+G4V0BXVC57mubIdDijeA=="],
+
+    "@redis/client": ["@redis/client@6.3.0", "", { "peerDependencies": { "@node-rs/xxhash": "^1.1.0", "@opentelemetry/api": ">=1 <2" }, "optionalPeers": ["@node-rs/xxhash", "@opentelemetry/api"] }, "sha512-fHrjwGCBvAANGi+TuRuwKi83sIOzgHr8eh+Uf48w3fSX7Hhrz174NrWqfJhAC2vnN0d/tfaZpdr6+o6JC3QHwg=="],
+
+    "@redis/json": ["@redis/json@6.3.0", "", { "peerDependencies": { "@redis/client": "^6.3.0" } }, "sha512-yt6vRfPBXtW/3qm53cF81TSQpLMjWdW4/2E9WQ2GgbvsKkuCKCFQIcMiKlil1ZMnezK+IQuS795xKU5psbaegw=="],
+
+    "@redis/search": ["@redis/search@6.3.0", "", { "peerDependencies": { "@redis/client": "^6.3.0" } }, "sha512-RPXAZmKjZZG7Tm7m1w9keFdXzbL91PiSHQBfQRe9xwW40jNsTRbG0FwhIz4QlHPU4gKDAsCy8IQHj4yZl4H9rw=="],
+
+    "@redis/time-series": ["@redis/time-series@6.3.0", "", { "peerDependencies": { "@redis/client": "^6.3.0" } }, "sha512-+fJOB8mN1z5WRakCJNh5lVdz1KqvHGSOistsKeitD24QsCtPwyRQXWC0iq6T/i/ubLE/YcguZqPm8F598MKk4A=="],
+
+    "@types/bun": ["@types/bun@1.4.3", "", { "dependencies": { "bun-types": "1.4.3" } }, "sha512-N67Pqy8JXbAY/j0tNraS3V5mubGvc6rrrNDmDCtZLlFzccbUJPDb0tvgUBC5q4m8ybkP93Jcn1QB+RYQ6PvBhw=="],
+
+    "@types/node": ["@types/node@26.6.5", "", { "dependencies": { "undici-types": "~8.9.0" } }, "sha512-uMzsv9stDdofIZBx4UGh4Z9ZgXnGC9seRDscilBcTHAeOFk67MZg/k9bWVfO+bk4qZmG+l52hRnLwUiH2LnJTg=="],
+
+    "@types/react": ["@types/react@19.3.0", "", { "dependencies": { "csstype": "^3.2.2" } }, "sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg=="],
+
+    "@types/react-dom": ["@types/react-dom@19.3.0", "", { "peerDependencies": { "@types/react": "^19.3.0" } }, "sha512-ZI7bU42mZXXKHn/qNLEw2IrbiINU7X5+vfgdixBHkCNpYWXjKgfQ/P+uyGb5CjOLB9UcnTeg3rylQtV2hym44Q=="],
+
+    "bun-types": ["bun-types@1.4.3", "", { "dependencies": { "@types/node": "*", "undici-types": "*" } }, "sha512-tinRJNGOmUN+tEAsn2y2e942n9JHRHR42iUYzDH75NmhJqVBokGSQkkfSFdNWwsANIdrK6ACH9t01M452YyTwg=="],
+
+    "csstype": ["csstype@3.2.3", "", {}, "sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ=="],
+
+    "hono": ["hono@4.13.13", "", {}, "sha512-CQ46U0ZkAGmbT/4UxdzzGJpacP2IeKgY4a5/tOI9AABbpOMfK739wfDXmv1usCk+3RkKj1hQy4/fjhiwa2xlrA=="],
+
+    "react": ["react@19.3.0", "", {}, "sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog=="],
+
+    "react-dom": ["react-dom@19.3.0", "", { "dependencies": { "scheduler": "^0.28.0" }, "peerDependencies": { "react": "^19.3.0" } }, "sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q=="],
+
+    "redis": ["redis@6.3.0", "", { "dependencies": { "@redis/bloom": "6.3.0", "@redis/client": "6.3.0", "@redis/json": "6.3.0", "@redis/search": "6.3.0", "@redis/time-series": "6.3.0" } }, "sha512-XFQbPie1lGpKeUZ8ySYY43yLnQy/iIQtHNvIr/1XdaABpb96rUSdm3Mfl+98FEVbv9ZJIzINMno5s0Nh8E5LEw=="],
+
+    "scheduler": ["scheduler@0.28.0", "", {}, "sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw=="],
+
+    "undici-types": ["undici-types@8.11.2", "", {}, "sha512-iMVNmWZ0leK/goS6eXMizSzmm9CDWtyphwbaCms3DNLqRxDL+mMoNVcZMTyyVgXP0N+Z8neAMzDoUOUJL8veKg=="],
+
+    "@types/node/undici-types": ["undici-types@8.9.0", "", {}, "sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg=="],
+  }
+}

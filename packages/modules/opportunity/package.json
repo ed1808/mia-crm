@@ -1,0 +1,10 @@
+{
+  "name": "@mia-crm/module-opportunity",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@mia-crm/kernel": "workspace:*",
+    "@mia-crm/db": "workspace:*"
+  }
+}

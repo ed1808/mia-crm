@@ -1,0 +1,14 @@
+{
+  "name": "@mia-crm/web",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@mia-crm/api": "workspace:*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@mia-crm/module-ai",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@mia-crm/kernel": "workspace:*",
+    "@mia-crm/db": "workspace:*",
+    "@mia-crm/module-metrics": "workspace:*",
+    "@mia-crm/module-commercial": "workspace:*",
+    "@mia-crm/module-vehicle": "workspace:*",
+    "@mia-crm/module-aftersales": "workspace:*",
+    "@mia-crm/module-opportunity": "workspace:*",
+    "@mia-crm/module-party": "workspace:*"
+  }
+}

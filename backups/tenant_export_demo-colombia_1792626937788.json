@@ -1,0 +1,459 @@
+{
+  "tenant": {
+    "id": "d0f0b2fc-3ee9-4396-a3d2-01ee9c1fc142",
+    "name": "Concesionario Los Coches & Carga del Valle SAS",
+    "slug": "demo-colombia",
+    "created_at": "2026-10-15T23:15:50.803Z"
+  },
+  "exportedAt": "2026-10-21T23:55:37.787Z",
+  "counts": {
+    "branches": 2,
+    "users": 0,
+    "parties": 3,
+    "vehicles": 5,
+    "workOrders": 11,
+    "opportunities": 16,
+    "leads": 4,
+    "deals": 6
+  },
+  "data": {
+    "branches": [
+      {
+        "id": "02115c00-1a7e-42f3-a3f9-ac0638bf9561",
+        "tenant_id": "d0f0b2fc-3ee9-4396-a3d2-01ee9c1fc142",
+        "name": "Sede Principal Calle 26",
+        "city": "Bogotá",
+        "address": "Avenida Calle 26 # 68-35",
+        "is_active": true,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "5e168860-cd05-48fd-9358-d236b0f38ce2",
+        "tenant_id": "d0f0b2fc-3ee9-4396-a3d2-01ee9c1fc142",
+        "name": "Sede Taller Pesados Yumbo",
+        "city": "Cali / Yumbo",
+        "address": "Km 5 Vía Yumbo",
+        "is_active": true,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      }
+    ],
+    "users": [],
+    "parties": [
+      {
+        "id": "fd9a03bd-f1b4-4ecc-8d0e-db7dbaa8abf0",
+        "party_type": "person",
+        "first_name": "Carlos",
+        "last_name": "Gómez",
+        "legal_name": null,
+        "trade_name": null
+      },
+      {
+        "id": "5153c2e5-c2f0-49ae-a999-c22cf08dc742",
+        "party_type": "person",
+        "first_name": "Diana",
+        "last_name": "Restrepo",
+        "legal_name": null,
+        "trade_name": null
+      },
+      {
+        "id": "915a4fda-8f2f-4e39-960d-8d69ba8edbdc",
+        "party_type": "company",
+        "first_name": null,
+        "last_name": null,
+        "legal_name": "Transportes y Logística del Valle SAS",
+        "trade_name": "LogiValle"
+      }
+    ],
+    "vehicles": [
+      {
+        "id": "7e9062ed-3193-4415-9179-de0dad4b5d79",
+        "vin": "3H1M2C8B4PK998877",
+        "current_plate": "STR889",
+        "make": "Kenworth",
+        "model": "T800 Tractocamión",
+        "model_year": 2023,
+        "vehicle_type": "truck",
+        "current_mileage": 110000
+      },
+      {
+        "id": "7f2897bd-83df-40f4-99c6-accf6ff6327d",
+        "vin": "1HGCR2F83HA001122",
+        "current_plate": "MED345",
+        "make": "Mazda",
+        "model": "CX-30 Grand Touring",
+        "model_year": 2022,
+        "vehicle_type": "car",
+        "current_mileage": 35000
+      },
+      {
+        "id": "6f28931a-62ab-440f-8988-ff426e38549a",
+        "vin": "9BWCA4244FP888999",
+        "current_plate": "ABC123",
+        "make": "Chevrolet",
+        "model": "Onix Turbo LTZ",
+        "model_year": 2021,
+        "vehicle_type": "car",
+        "current_mileage": 58000
+      },
+      {
+        "id": "fe5604ad-49e8-45cf-b31c-0a027cbbb7e1",
+        "vin": "LB1C4A8D3KL554433",
+        "current_plate": "VLM444",
+        "make": "Foton",
+        "model": "Aumark 4.5T",
+        "model_year": 2022,
+        "vehicle_type": "truck",
+        "current_mileage": 72000
+      },
+      {
+        "id": "7c760379-8625-4ca6-bd06-c703a332d6c7",
+        "vin": "3H1M2C8B4PK112233",
+        "current_plate": "TLX111",
+        "make": "Kenworth",
+        "model": "T800 Volqueta",
+        "model_year": 2021,
+        "vehicle_type": "truck",
+        "current_mileage": 145000
+      }
+    ],
+    "workOrders": [
+      {
+        "id": "1cb111bc-d4da-4b7c-aa85-18c3b386051f",
+        "external_id": "WO-7001",
+        "order_number": 7001,
+        "order_type": "maintenance",
+        "status": "completed",
+        "mileage": 30000,
+        "entered_at": "2025-08-01T00:00:00.000Z"
+      },
+      {
+        "id": "9e6c6258-c46a-4928-bf12-d3f9ee064f9f",
+        "external_id": "WO-7450",
+        "order_number": 7450,
+        "order_type": "maintenance",
+        "status": "completed",
+        "mileage": 65000,
+        "entered_at": "2025-12-15T00:00:00.000Z"
+      },
+      {
+        "id": "66b90a0b-2d7d-45e3-aede-0e4b248d3588",
+        "external_id": "WO-8120",
+        "order_number": 8120,
+        "order_type": "maintenance",
+        "status": "completed",
+        "mileage": 95000,
+        "entered_at": "2026-05-10T00:00:00.000Z"
+      },
+      {
+        "id": "a93b1779-db44-489d-85f9-3ef6435b201f",
+        "external_id": "WO-6100",
+        "order_number": 6100,
+        "order_type": "maintenance",
+        "status": "completed",
+        "mileage": 10000,
+        "entered_at": "2024-10-10T00:00:00.000Z"
+      },
+      {
+        "id": "de9d8df7-7466-4771-b0a0-0ed0fb31d957",
+        "external_id": "WO-6800",
+        "order_number": 6800,
+        "order_type": "maintenance",
+        "status": "completed",
+        "mileage": 20000,
+        "entered_at": "2025-05-12T00:00:00.000Z"
+      },
+      {
+        "id": "cfe9cf1e-f1a3-4029-aa5e-8dac32236368",
+        "external_id": "WO-7500",
+        "order_number": 7500,
+        "order_type": "maintenance",
+        "status": "completed",
+        "mileage": 30000,
+        "entered_at": "2025-11-20T00:00:00.000Z"
+      },
+      {
+        "id": "9e5c6fc2-987d-4293-84a2-6e485bdf36e5",
+        "external_id": "WO-5200",
+        "order_number": 5200,
+        "order_type": "maintenance",
+        "status": "completed",
+        "mileage": 20000,
+        "entered_at": "2023-08-10T00:00:00.000Z"
+      },
+      {
+        "id": "11a73d4a-fab2-4719-9102-39dd536ec98f",
+        "external_id": "WO-6300",
+        "order_number": 6300,
+        "order_type": "maintenance",
+        "status": "completed",
+        "mileage": 40000,
+        "entered_at": "2024-06-15T00:00:00.000Z"
+      },
+      {
+        "id": "efb6e867-15af-48c0-97ff-72e517c936ca",
+        "external_id": "WO-7200",
+        "order_number": 7200,
+        "order_type": "maintenance",
+        "status": "completed",
+        "mileage": 40000,
+        "entered_at": "2025-06-10T00:00:00.000Z"
+      },
+      {
+        "id": "311f5520-7d22-4cb3-8847-f3f76907b625",
+        "external_id": "WO-6500",
+        "order_number": 6500,
+        "order_type": "maintenance",
+        "status": "completed",
+        "mileage": 110000,
+        "entered_at": "2024-11-05T00:00:00.000Z"
+      },
+      {
+        "id": "c257eb1e-0142-4d6f-b052-93fbdb703bee",
+        "external_id": "WO-7800",
+        "order_number": 7800,
+        "order_type": "maintenance",
+        "status": "completed",
+        "mileage": 135000,
+        "entered_at": "2025-09-12T00:00:00.000Z"
+      }
+    ],
+    "opportunities": [
+      {
+        "id": "baffbdf3-c7bb-4f15-bda1-1dac76c3009d",
+        "rule_id": "R-RTM-01",
+        "status": "converted",
+        "score": "91.00",
+        "value_estimate": "320000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "24f972cd-b243-4cc3-b505-a041613f524d",
+        "rule_id": "R-MNT-01",
+        "status": "converted",
+        "score": "89.17",
+        "value_estimate": "450000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "eba4b4d2-9773-492b-9d53-4d435c788166",
+        "rule_id": "R-RTM-01",
+        "status": "converted",
+        "score": "89.00",
+        "value_estimate": "320000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "ce17aad5-94c2-46c7-89e8-0d940bc0e171",
+        "rule_id": "R-MNT-01",
+        "status": "detected",
+        "score": "83.33",
+        "value_estimate": "450000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "486f2c88-8064-472b-ae55-bec7d04f8ed7",
+        "rule_id": "R-WAR-01",
+        "status": "detected",
+        "score": "88.75",
+        "value_estimate": "800000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "31dff9e8-40b6-40b6-920a-92c3b897fbc8",
+        "rule_id": "R-RET-01",
+        "status": "detected",
+        "score": "78.00",
+        "value_estimate": "3500000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "15e64f92-0926-40fd-9a6e-971552da4adb",
+        "rule_id": "R-FLT-01",
+        "status": "detected",
+        "score": "85.00",
+        "value_estimate": "1350000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "84e1f010-f656-430c-bc5a-a3a2c0f90240",
+        "rule_id": "R-MNT-01",
+        "status": "detected",
+        "score": "81.00",
+        "value_estimate": "450000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "bfd06e3e-9e67-4ae2-a109-a0454bc656b9",
+        "rule_id": "R-WAR-01",
+        "status": "detected",
+        "score": "83.75",
+        "value_estimate": "800000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "9310fb5b-b540-4919-8904-f83d29524f2c",
+        "rule_id": "R-MNT-02",
+        "status": "detected",
+        "score": "78.33",
+        "value_estimate": "500000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "cf8961d9-853d-4c47-86af-7ce8c92961ae",
+        "rule_id": "R-MNT-01",
+        "status": "detected",
+        "score": "74.00",
+        "value_estimate": "450000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "87b70919-7fb2-469c-8e06-597c0c2917f5",
+        "rule_id": "R-WAR-01",
+        "status": "detected",
+        "score": "80.00",
+        "value_estimate": "800000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "ab8a3660-da3d-4c1f-abe3-0cd6ecb9cda8",
+        "rule_id": "R-RET-01",
+        "status": "detected",
+        "score": "78.00",
+        "value_estimate": "3500000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "96bf3d27-1ade-4519-89e7-2cb2c8ad0eac",
+        "rule_id": "R-FLT-01",
+        "status": "detected",
+        "score": "85.00",
+        "value_estimate": "1350000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "67536a3d-ec78-4d57-bf79-d0ebc27ea1c9",
+        "rule_id": "R-RET-01",
+        "status": "detected",
+        "score": "78.00",
+        "value_estimate": "3500000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      },
+      {
+        "id": "14c8fcb5-962b-45a1-802d-c87fed713954",
+        "rule_id": "R-FLT-01",
+        "status": "detected",
+        "score": "85.00",
+        "value_estimate": "1350000.00",
+        "is_control_group": false,
+        "created_at": "2026-10-15T23:16:45.412Z"
+      }
+    ],
+    "leads": [
+      {
+        "id": "403ee452-0828-4319-9b38-2ac8f7c2e0a5",
+        "first_name": "Andrés Felipe",
+        "last_name": "Morales Silva",
+        "phone": "+573128901234",
+        "email": "andres.morales@colombiacargo.com",
+        "source": "meta_lead_ads",
+        "status": "new",
+        "interested_vehicle_model": "Toyota Hilux 4x4 Diésel"
+      },
+      {
+        "id": "c6d0d258-5812-4e7e-aae6-d225dcb40d55",
+        "first_name": "Alimentos del Valle SAS",
+        "last_name": "(Contacto: Ing. Rodrigo Pardo)",
+        "phone": "+573157778899",
+        "email": "compras@alimentosdelvalle.com.co",
+        "source": "web_form",
+        "status": "new",
+        "interested_vehicle_model": "3x Camión Hino Serie 300 Furgón"
+      },
+      {
+        "id": "ba32a0a7-9da0-41f5-80eb-f2bef8781214",
+        "first_name": "Carolina",
+        "last_name": "Gómez Hoyos",
+        "phone": "+573105556677",
+        "email": "carolina.gomez@medicosantioquia.org",
+        "source": "showroom_walk_in",
+        "status": "new",
+        "interested_vehicle_model": "Mazda CX-30 Grand Touring Híbrida"
+      },
+      {
+        "id": "2b84047b-e81c-491d-8d20-500f1c3c0a98",
+        "first_name": "Transportes TransLogística Andina SAS",
+        "last_name": "(Gerencia de Operaciones)",
+        "phone": "+573004443322",
+        "email": "operaciones@translogistica.com.co",
+        "source": "phone_inbound",
+        "status": "new",
+        "interested_vehicle_model": "Camiones Pesados FVR / Isuzu Chasis Largo"
+      }
+    ],
+    "deals": [
+      {
+        "id": "ada97241-9ac1-4ac5-be06-a1a841d679d5",
+        "title": "Toyota Hilux 4x4 — Andrés Morales",
+        "estimated_value": "166747000.00",
+        "status": "open",
+        "created_at": "2026-10-15T23:58:05.618Z",
+        "customer_name": "Carlos Gómez"
+      },
+      {
+        "id": "b1d4fb68-6fa7-45e5-a428-a993f21d8c56",
+        "title": "Mazda CX-30 Grand Touring — Carolina Gómez",
+        "estimated_value": "128000000.00",
+        "status": "open",
+        "created_at": "2026-10-15T23:58:05.630Z",
+        "customer_name": "Carlos Gómez"
+      },
+      {
+        "id": "2a591693-b71c-4e37-add6-b3fa52017f3d",
+        "title": "Renault Duster Iconic 4x4 — Roberto Cadavid",
+        "estimated_value": "104000000.00",
+        "status": "open",
+        "created_at": "2026-10-15T23:58:05.632Z",
+        "customer_name": "Carlos Gómez"
+      },
+      {
+        "id": "f3ce06ad-cc01-44e3-aece-775ffdd58f72",
+        "title": "3x Camiones Hino Serie 300 — TransAlimentos SAS",
+        "estimated_value": "720000000.00",
+        "status": "open",
+        "created_at": "2026-10-15T23:58:05.633Z",
+        "customer_name": "Carlos Gómez"
+      },
+      {
+        "id": "11a38c88-536c-472a-a447-a5d0df95245c",
+        "title": "Retoma Toyota Fortuner 2021 — Luis Fernando Mejía",
+        "estimated_value": "145000000.00",
+        "status": "open",
+        "created_at": "2026-10-15T23:58:05.634Z",
+        "customer_name": "Carlos Gómez"
+      },
+      {
+        "id": "a199ab00-ca56-4548-821c-97c181940254",
+        "title": "Paquete Flota 5 Unidades — TransLogística Andina SAS",
+        "estimated_value": "1250000000.00",
+        "status": "open",
+        "created_at": "2026-10-15T23:58:05.635Z",
+        "customer_name": "Carlos Gómez"
+      }
+    ]
+  }
+}
