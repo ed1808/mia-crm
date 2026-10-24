@@ -55,9 +55,12 @@ export function createAiRouter() {
 
     const executeToolUseCase = new ExecuteAiToolUseCase(initializedRegistry, initializedRepo);
     const approveExecutionUseCase = new ApproveExecutionUseCase(initializedRepo);
-    const llmProvider = process.env.GEMINI_API_KEY
-      ? new GeminiLlmProvider()
-      : new MockLlmProvider();
+    const llmProvider =
+      process.env.NODE_ENV !== 'test' &&
+      process.env.GEMINI_API_KEY &&
+      process.env.GEMINI_API_KEY.startsWith('AIza')
+        ? new GeminiLlmProvider()
+        : new MockLlmProvider();
 
     const copilotChatUseCase = new CopilotChatUseCase(
       initializedRegistry,

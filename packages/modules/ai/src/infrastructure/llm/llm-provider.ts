@@ -325,10 +325,13 @@ export class GeminiLlmProvider implements ILlmProvider {
 
       const systemMsg = messages.find((m) => m.role === 'system');
 
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`;
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent`;
       const response = await fetch(url, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'x-goog-api-key': key
+        },
         body: JSON.stringify({
           contents,
           systemInstruction: systemMsg ? { parts: [{ text: systemMsg.content }] } : undefined,

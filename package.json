@@ -3,9 +3,12 @@
   "private": true,
   "workspaces": ["apps/*", "packages/*", "packages/modules/*"],
   "scripts": {
+    "dev": "bun --hot run apps/web/src/server.ts",
     "dev:api": "bun --hot run apps/api/src/index.ts",
     "dev:web": "bun --hot run apps/web/src/server.ts",
     "build:web": "bun build apps/web/src/index.html --outdir apps/web/dist",
+    "db:migrate": "bun run scripts/migrate.ts",
+    "db:seed": "bun run scripts/seed-demo.ts && bun run apps/api/src/seed-commercial.ts",
     "test": "bun test",
     "lint": "bunx @biomejs/biome check .",
     "lint:fix": "bunx @biomejs/biome check --write ."

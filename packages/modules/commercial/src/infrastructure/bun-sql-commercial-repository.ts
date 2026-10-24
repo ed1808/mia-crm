@@ -140,7 +140,7 @@ export class BunSqlCommercialRepository implements CommercialRepository {
   // PIPELINES
   // ----------------------------------------------------
   async savePipeline(pipeline: Pipeline): Promise<void> {
-    await this.sql`
+    const rows = await this.sql<any[]>`
       INSERT INTO pipelines (id, tenant_id, code, name, is_default, created_at)
       VALUES (
         ${pipeline.id}::uuid,
@@ -153,7 +153,9 @@ export class BunSqlCommercialRepository implements CommercialRepository {
       ON CONFLICT (tenant_id, code) DO UPDATE SET
         name = EXCLUDED.name,
         is_default = EXCLUDED.is_default
+      RETURNING id
     `;
+    const actualPipelineId = rows[0]?.id ?? pipeline.id;
 
     for (const stage of pipeline.props.stages) {
       await this.sql`
@@ -162,7 +164,7 @@ export class BunSqlCommercialRepository implements CommercialRepository {
         ) VALUES (
           ${stage.id}::uuid,
           ${stage.props.tenantId}::uuid,
-          ${pipeline.id}::uuid,
+          ${actualPipelineId}::uuid,
           ${stage.code},
           ${stage.name},
           ${stage.orderIndex},
@@ -276,6 +278,13 @@ export class BunSqlCommercialRepository implements CommercialRepository {
     `;
     const tenantId = tenantRes[0]?.tenant_id;
     if (!tenantId) return [];
+
+    const existing = await this.sql<any[]>`
+      SELECT id FROM pipelines WHERE tenant_id = ${tenantId}::uuid LIMIT 1
+    `;
+    if (existing.length > 0) {
+      return this.findPipelines();
+    }
 
     const now = new Date();
     const createdPipelines: Pipeline[] = [];

@@ -37,6 +37,15 @@ export async function seedCommercialData() {
     const pipelines = await repo.ensureDefaultPipelines();
     console.log(`Pipelines configurados: ${pipelines.length}`);
 
+    // Verificar si ya existen deals sembrados
+    const existingDeals = await tx<{ id: string }[]>`
+      SELECT id FROM deals WHERE tenant_id = ${tenantId}::uuid LIMIT 1
+    `;
+    if (existingDeals.length > 0) {
+      console.log('Datos comerciales ya existentes para el tenant demo-colombia. No se requiere re-sembrar.');
+      return;
+    }
+
     const passengerPipeline = pipelines.find((p) => p.code === 'new_passenger')!;
     const heavyPipeline = pipelines.find((p) => p.code === 'commercial_heavy')!;
     const usedPipeline = pipelines.find((p) => p.code === 'used_tradein')!;
